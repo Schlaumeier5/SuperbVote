@@ -5,8 +5,6 @@ import io.minimum.minecraft.superbvote.util.PlayerVotes;
 import io.minimum.minecraft.superbvote.votes.Vote;
 import lombok.NonNull;
 import lombok.Value;
-import org.bukkit.Bukkit;
-import org.bukkit.OfflinePlayer;
 
 import javax.script.Invocable;
 import javax.script.ScriptEngine;

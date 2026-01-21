@@ -4,7 +4,6 @@ import com.google.common.base.Preconditions;
 import io.minimum.minecraft.superbvote.util.PlayerVotes;
 import io.minimum.minecraft.superbvote.votes.Vote;
 import lombok.RequiredArgsConstructor;
-import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.Optional;
 import java.util.Random;
