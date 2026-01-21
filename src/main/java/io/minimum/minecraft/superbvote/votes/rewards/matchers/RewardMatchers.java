@@ -5,7 +5,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import io.minimum.minecraft.superbvote.SuperbVote;
 import net.milkbowl.vault.permission.Permission;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.similarity.LevenshteinDistance;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -45,7 +45,7 @@ public class RewardMatchers {
     private static List<String> closestMatch(String string) {
         List<String> matched = new ArrayList<>();
         for (String availableMatcher : AVAILABLE_MATCHERS) {
-            if (StringUtils.getLevenshteinDistance(string, availableMatcher) <= 2) {
+            if (LevenshteinDistance.getDefaultInstance().apply(string, availableMatcher) <= 2) {
                 matched.add(availableMatcher);
             }
         }
